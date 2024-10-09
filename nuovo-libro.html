@@ -7,16 +7,13 @@
   <title>Bootstrap dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+      .form-control::placeholder {color: rgb(212, 208, 208); }
+    </style>
 </head>
 
-
 <body>
-  <style>
-    .form-control::placeholder {
-      color: rgb(212, 208, 208);
-      opacity: 1;
-    }
-  </style>
   <!-- Navabar -->
   <header>
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
@@ -57,61 +54,63 @@
   <main>
     <div class="container mt-5">
       <div class="row g-3">
-          <div class="col">
-            <label for="name" class="form-label"> Nome Autore</label>
-            <input type="text" class="form-control " aria-label="First name" id="name" name="name"
-              placeholder="Inserisci il nome dell'autore" required>
+        <div class="col">
+          <label for="name" class="form-label"> Nome Autore</label>
+          <input type="text" class="form-control " aria-label="First name" id="name" name="name"
+            placeholder="Inserisci il nome dell'autore" required>
+        </div>
+
+        <div class="col">
+          <label for="cognome" class="form-label"> Cognome Autore</label>
+          <input type="text" class="form-control" aria-label="Last name" id ="cognome" name="cognome"
+            placeholder="Inserisci il cognome dell'autore" required>
+        </div>
+
+
+        <div>
+          <label for="titolo" class="form-label fw-semibold">Titolo </label>
+          <input type="text" class="form-control" id="titolo" placeholder="Inserisci il titolo del libro" name="titolo"
+            required>
+          <h6 class="display-6 fs-6 text"> Titolo versione italiana</h6>
+        </div>
+
+
+        <div class="col-lg-4">
+          <label for="genere" class="form-label fw-semibold">Genere</label>
+          <select id="genere" class="form-select">
+            <option selected> Scegli il genere</option>
+            <option>...</option>
+          </select>
+        </div>
+
+        <div class="col-lg-4">
+          <label for="inputCity" class="form-label fw-semibold"> Anno di Pubblicazione</label>
+          <input type="text" class="form-control" id="inputCity" placeholder="Inserisci l'anno" maxlength="4">
+        </div>
+
+
+        <div class="col-lg-4">
+          <label for="codice" class="form-label fw-semibold ">ISBN#</label>
+          <input type="text" class="form-control" id="codice" placeholder="Inserisci il codice ISBN#" maxlength="13">
+        </div>
+
+        <div class="mt-4">
+          <label for="message" class="form-label fw-semibold ">Note</label>
+          <textarea class="form-control" placeholder="Inserisci eventuali note sul libro" id="message"></textarea>
+        </div>
+
+        <div>
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Disponibile anche in digitale
+            </label>
           </div>
+          <a href=""> <button type="submit" value="invia dati" class="btn btn-primary btn-lg mt-4">Aggiungi
+              libro</button> </a>
 
-          <div class="col">
-            <label for="nome" class="form-label"> Cognome Autore</label>
-            <input type="text" class="form-control" aria-label="Last name" name="cognome"
-              placeholder="Inserisci il cognome dell'autore" required>
-          </div>
-    
+        </div>
 
-          <div>
-            <label for="titolo" class="form-label fw-semibold">Titolo </label>
-            <input type="text" class="form-control" id="titolo" placeholder="Inserisci il titolo del libro"
-              name="titolo" required>
-            <h6 class="display-6 fs-6 text"> Titolo versione italiana</h6>
-          </div>
-
-
-          <div class="col-lg-4">
-            <label for="genere" class="form-label fw-semibold">Genere</label>
-            <select id="genere" class="form-select">
-              <option selected> Scegli il genere</option>
-              <option>...</option>
-            </select>
-          </div>
-
-          <div class="col-lg-4">
-            <label for="inputCity" class="form-label fw-semibold"> Anno di Pubblicazione</label>
-            <input type="text" class="form-control" id="inputCity" placeholder="Inserisci l'anno" maxlength="4">
-          </div>
-
-
-          <div class="col-lg-4">
-            <label for="codice" class="form-label fw-semibold ">ISBN#</label>
-            <input type="text" class="form-control" id="codice" placeholder="Inserisci il codice ISBN#" maxlength="13">
-          </div>
-
-          <div class="mt-4">
-            <label for="message" class="form-label fw-semibold ">Note</label>
-            <textarea class="form-control" placeholder="Inserisci eventuali note sul libro" id="message"></textarea>
-          </div>
-
-          <div>
-            <div class="form-check mt-2">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Disponibile anche in digitale
-              </label>
-            </div>
-            <a href=""> <button type="submit" class="btn btn-primary btn-lg mt-4">Aggiungi libro</button> </a>
-          </div>
- 
       </div>
     </div>
   </main>
